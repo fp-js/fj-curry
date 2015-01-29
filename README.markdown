@@ -21,9 +21,9 @@ curry2(add)(2)(3); // => 5
 
 var curry3 = require('fd-curry').curry3;
 function add(a, b, c) { return a+b+c; }
-curry2(add)(2)(3)(4); // => 9
+curry3(add)(2)(3)(4); // => 9
 
 var curry4 = require('fd-curry').curry4;
 function add(a, b, c, d) { return a+b+c+d; }
-curry2(add)(2)(3)(4)(5); // => 14
+curry4(add)(2)(3)(4)(5); // => 14
 ```
