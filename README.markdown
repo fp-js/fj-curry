@@ -1,6 +1,6 @@
 # fd-curry
 
-[![Build Status](https://travis-ci.org/stoeffel/fd-curry.svg)](https://travis-ci.org/stoeffel/fd-curry) [![npm version](https://badge.fury.io/js/fd-curry.svg)](http://badge.fury.io/js/fd-curry)
+[![Build Status](https://travis-ci.org/fp-js/fd-curry.svg)](https://travis-ci.org/fp-js/fd-curry) [![npm version](https://badge.fury.io/js/fd-curry.svg)](http://badge.fury.io/js/fd-curry)
 > Curry a function
 
 ## Installation

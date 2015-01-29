@@ -15,7 +15,10 @@
     "fp",
     "dom"
   ],
-  "author": "schtoeffel",
+  "contributors": [
+    "hemanth.hm <hemanth.hm@gmail.com> (http://www.h3manth.com),
+    "stoeffel <schtoeffel@gmail.com> (http://www.schtoeffel.ch)
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fp-js/module-template/issues"
