@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fp-js/module-template.git"
+    "url": "https://github.com/fp-js/fd-curry.git"
   },
   "keywords": [
     "fp-dom",
@@ -21,9 +21,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fp-js/module-template/issues"
+    "url": "https://github.com/fp-js/fd-curry/issues"
   },
-  "homepage": "https://github.com/fp-js/module-template",
+  "homepage": "https://github.com/fp-js/fd-curry",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-6to5": "^3.0.0",
