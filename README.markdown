@@ -55,15 +55,15 @@ Curry all arguments (`fn.length`) of a function.
 
 ***Parameters***
 
-| Name          | Type        | Description                |
-| ------------- | ----------- | -------------------------- |
-| fn            | function    | The function to be curried |
+| Name          | Type        | Description                 |
+| ------------- | ----------- | --------------------------  |
+| fn            | function    | The function to be curryied |
 
 ***Returns***
 
 | Type        | Description                |
 | ----------- | -------------------------- |
-| function    | A curried function         |
+| function    | A curryied function        |
 
 
 ### curryN
@@ -74,16 +74,16 @@ Curry n arguments of a function
 
 ***Parameters***
 
-| Name          | Type        | Description                   |
-| ------------- | ----------- | --------------------------    |
-| n             | int         | `n` arguments will be curried |
-| fn            | function    | The function to be curried    |
+| Name          | Type        | Description                    |
+| ------------- | ----------- | --------------------------     |
+| n             | int         | `n` arguments will be curryied |
+| fn            | function    | The function to be curryied    |
 
 ***Returns***
 
 | Type        | Description                |
 | ----------- | -------------------------- |
-| function    | A curried function         |
+| function    | A curryied function        |
 
 
 ### curry1-4
@@ -99,10 +99,10 @@ Curry 1, 2, 3, or 4 arguments of a function.
 
 | Name          | Type        | Description                   |
 | ------------- | ----------- | --------------------------    |
-| fn            | function    | The function to be curried    |
+| fn            | function    | The function to be curryied   |
 
 ***Returns***
 
 | Type        | Description                |
 | ----------- | -------------------------- |
-| function    | A curried function         |
+| function    | A curryied function        |
