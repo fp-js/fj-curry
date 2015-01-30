@@ -3,7 +3,7 @@ import { stub } from 'sinon';
 import { curry, curryN, curry1, curry2, curry3, curry4 } from './';
 
 
-test('fd-curry#curry', (t) => {
+test('fj-curry#curry', (t) => {
   t.plan(5);
 
   let spy = stub().returns(true);
@@ -20,7 +20,7 @@ test('fd-curry#curry', (t) => {
   t.ok(spy.calledWith(1, 2, 3));
 });
 
-test('fd-curry#curryN', (t) => {
+test('fj-curry#curryN', (t) => {
   t.plan(7);
 
   let spy = stub().returns(true);
@@ -36,7 +36,7 @@ test('fd-curry#curryN', (t) => {
   t.ok(spy.calledWith(1, 2, 3));
 });
 
-test('fd-curry#curry1', (t) => {
+test('fj-curry#curry1', (t) => {
   t.plan(3);
 
   let spy = stub().returns(true);
@@ -46,7 +46,7 @@ test('fd-curry#curry1', (t) => {
   t.ok(spy.calledWith(1));
 });
 
-test('fd-curry#curry2', (t) => {
+test('fj-curry#curry2', (t) => {
   t.plan(3);
 
   let spy = stub().returns(true);
@@ -56,7 +56,7 @@ test('fd-curry#curry2', (t) => {
   t.ok(spy.calledWith(1, 2));
 });
 
-test('fd-curry#curry3', (t) => {
+test('fj-curry#curry3', (t) => {
   t.plan(3);
 
   let spy = stub().returns(true);
@@ -66,7 +66,7 @@ test('fd-curry#curry3', (t) => {
   t.ok(spy.calledWith(1, 2, 3));
 });
 
-test('fd-curry#curry4', (t) => {
+test('fj-curry#curry4', (t) => {
   t.plan(3);
 
   let spy = stub().returns(true);

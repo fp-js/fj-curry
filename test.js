@@ -16,7 +16,7 @@ var curry4 = _.curry4;
 
 
 
-test("fd-curry#curry", function (t) {
+test("fj-curry#curry", function (t) {
   t.plan(5);
 
   var spy = stub().returns(true);
@@ -33,7 +33,7 @@ test("fd-curry#curry", function (t) {
   t.ok(spy.calledWith(1, 2, 3));
 });
 
-test("fd-curry#curryN", function (t) {
+test("fj-curry#curryN", function (t) {
   t.plan(7);
 
   var spy = stub().returns(true);
@@ -49,7 +49,7 @@ test("fd-curry#curryN", function (t) {
   t.ok(spy.calledWith(1, 2, 3));
 });
 
-test("fd-curry#curry1", function (t) {
+test("fj-curry#curry1", function (t) {
   t.plan(3);
 
   var spy = stub().returns(true);
@@ -59,7 +59,7 @@ test("fd-curry#curry1", function (t) {
   t.ok(spy.calledWith(1));
 });
 
-test("fd-curry#curry2", function (t) {
+test("fj-curry#curry2", function (t) {
   t.plan(3);
 
   var spy = stub().returns(true);
@@ -69,7 +69,7 @@ test("fd-curry#curry2", function (t) {
   t.ok(spy.calledWith(1, 2));
 });
 
-test("fd-curry#curry3", function (t) {
+test("fj-curry#curry3", function (t) {
   t.plan(3);
 
   var spy = stub().returns(true);
@@ -79,7 +79,7 @@ test("fd-curry#curry3", function (t) {
   t.ok(spy.calledWith(1, 2, 3));
 });
 
-test("fd-curry#curry4", function (t) {
+test("fj-curry#curry4", function (t) {
   t.plan(3);
 
   var spy = stub().returns(true);
