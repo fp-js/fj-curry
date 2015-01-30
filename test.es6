@@ -1,7 +1,40 @@
 import test from 'prova';
 import { stub } from 'sinon';
-import { curry1, curry2, curry3, curry4 } from './';
+import { curry, curryN, curry1, curry2, curry3, curry4 } from './';
 
+
+test('fd-curry#curry', (t) => {
+  t.plan(5);
+
+  let spy = stub().returns(true);
+  function func(a, b, c) {
+    return spy.apply(this, arguments);
+  }
+ 
+  t.equal(typeof curry, 'function');
+  
+  t.equal(curry(func)(1, 2)(3, 4), true);
+  t.ok(spy.calledWith(1, 2, 3));
+
+  t.equal(curry(func)(1)(2, 3), true);
+  t.ok(spy.calledWith(1, 2, 3));
+});
+
+test('fd-curry#curryN', (t) => {
+  t.plan(7);
+
+  let spy = stub().returns(true);
+ 
+  t.equal(typeof curryN, 'function');
+  t.equal(curryN(1, spy)(1, 2), true);
+  t.ok(spy.calledWith(1));
+  
+  t.equal(curryN(3, spy)(1, 2)(3, 4), true);
+  t.ok(spy.calledWith(1, 2, 3));
+
+  t.equal(curryN(3, spy)(1)(2, 3), true);
+  t.ok(spy.calledWith(1, 2, 3));
+});
 
 test('fd-curry#curry1', (t) => {
   t.plan(3);

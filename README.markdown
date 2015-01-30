@@ -10,6 +10,22 @@
 ## Usage
 
 ```js
+var curry = require('fd-curry').curry;
+function add(a, b, c) { return a+b+c; }
+
+curry(add)(2)(3)(4); // => 9
+curry(add)(2, 3)(4); // => 9
+curry(add)(2, 3, 4); // => 9
+curry(add)(2)(3, 4); // => 9
+
+var curryN = require('fd-curry').curryN;
+function add(a, b, c) { return a+b+c; }
+
+curryN(3, add)(2)(3)(4); // => 9
+curryN(3, add)(2, 3)(4); // => 9
+curryN(3, add)(2, 3, 4); // => 9
+curryN(3, add)(2)(3, 4); // => 9
+
 var curry1 = require('fd-curry').curry1;
 
 parseInt('2', 2); // => NaN

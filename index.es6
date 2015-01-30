@@ -1,35 +1,27 @@
-export function curry1(fn) {
-  return (arg1) => {
-    return fn.call(null, arg1);
+var slice = Array.prototype.slice;
+
+function _curry(n, fn, curryArgs) {
+  return function() {
+    var args = slice.call(arguments),
+      concatArgs = curryArgs.concat(args);
+
+    if (n > concatArgs.length) {
+      return _curry(n, fn, concatArgs);
+    } else {
+      return fn.apply(this, slice.call(concatArgs, 0, n));
+    }
   };
 }
 
-export function curry2(fn) {
-  return (arg1) => {
-    return (arg2) => {
-      return fn.call(null, arg1, arg2);
-    };
-  };
+export function curry(fn) {
+  return _curry(fn.length, fn, []);
 }
 
-export function curry3(fn) {
-  return (arg1) => {
-    return (arg2) => {
-      return (arg3) => {
-        return fn.call(null, arg1, arg2, arg3);
-      };
-    };
-  };
+export function curryN(n, fn) {
+  return _curry(n, fn, []);
 }
 
-export function curry4(fn) {
-  return (arg1) => {
-    return (arg2) => {
-      return (arg3) => {
-        return (arg4) => {
-          return fn.call(null, arg1, arg2, arg3, arg4);
-        };
-      };
-    };
-  };
-}
+export var curry1 = curryN(2, curryN)(1);
+export var curry2 = curryN(2, curryN)(2);
+export var curry3 = curryN(2, curryN)(3);
+export var curry4 = curryN(2, curryN)(4);
