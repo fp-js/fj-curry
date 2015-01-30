@@ -44,3 +44,65 @@ var curry4 = require('fj-curry').curry4;
 function add(a, b, c, d) { return a+b+c+d; }
 curry4(add)(2)(3)(4)(5); // => 14
 ```
+
+## API
+
+### curry
+
+Curry all arguments (`fn.length`) of a function.
+
+`curry(fn)`
+
+***Parameters***
+
+| Name          | Type        | Description                |
+| ------------- | ----------- | -------------------------- |
+| fn            | function    | The function to be curried |
+
+***Returns***
+
+| Type        | Description                |
+| ----------- | -------------------------- |
+| function    | A curried function         |
+
+
+### curryN
+
+Curry n arguments of a function
+
+`curryN(n, fn)`
+
+***Parameters***
+
+| Name          | Type        | Description                   |
+| ------------- | ----------- | --------------------------    |
+| n             | int         | `n` arguments will be curried |
+| fn            | function    | The function to be curried    |
+
+***Returns***
+
+| Type        | Description                |
+| ----------- | -------------------------- |
+| function    | A curried function         |
+
+
+### curry1-4
+
+Curry 1, 2, 3, or 4 arguments of a function.
+
+`curry1(fn)`
+`curry2(fn)`
+`curry3(fn)`
+`curry4(fn)`
+
+***Parameters***
+
+| Name          | Type        | Description                   |
+| ------------- | ----------- | --------------------------    |
+| fn            | function    | The function to be curried    |
+
+***Returns***
+
+| Type        | Description                |
+| ----------- | -------------------------- |
+| function    | A curried function         |

@@ -9,7 +9,8 @@ gulp.task('6to5', function() {
   return gulp.src('**/*.es6')
     .pipe(sourcemaps.init())
     .pipe(to5({
-      experimental: true
+      experimental: true,
+      loose: 'all'
     }))
     .pipe(sourcemaps.write())
     .pipe(rename({
