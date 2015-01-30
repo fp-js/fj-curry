@@ -19,8 +19,9 @@ curry(add)(2, 3, 4); // => 9
 curry(add)(2)(3, 4); // => 9
 
 var curryN = require('fj-curry').curryN;
-function add(a, b, c) { return a+b+c; }
+function add(a, b, c, d) { d = d || 0; return a+b+c; }
 
+// curry only 3 of the 4 arguments
 curryN(3, add)(2)(3)(4); // => 9
 curryN(3, add)(2, 3)(4); // => 9
 curryN(3, add)(2, 3, 4); // => 9
