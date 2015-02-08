@@ -4,25 +4,29 @@ exports.curry = curry;
 exports.curryN = curryN;
 var slice = Array.prototype.slice;
 
-function _curry(n, fn, curryArgs) {
+var _curry = function (n, fn) {
+  var curryArgs = arguments[2] === undefined ? [] : arguments[2];
   return function () {
-    var args = slice.call(arguments),
-        concatArgs = curryArgs.concat(args);
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    var concatArgs = curryArgs.concat(args);
 
     if (n > concatArgs.length) {
       return _curry(n, fn, concatArgs);
     } else {
-      return fn.apply(this, slice.call(concatArgs, 0, n));
+      return fn.apply(null, slice.call(concatArgs, 0, n));
     }
   };
-}
+};
 
 function curry(fn) {
-  return _curry(fn.length, fn, []);
+  return _curry(fn.length, fn);
 }
 
 function curryN(n, fn) {
-  return _curry(n, fn, []);
+  return _curry(n, fn);
 }
 
 var curry1 = exports.curry1 = curryN(2, curryN)(1);
