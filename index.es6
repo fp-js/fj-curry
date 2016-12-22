@@ -1,21 +1,21 @@
-var slice = Array.prototype.slice;
-
-let _curry = (n, fn, curryArgs = []) => {
+let _curry = (fn, curryArgs = []) => {
   return (...args) => {
-    var concatArgs = curryArgs.concat(args);
+    var concatArgs = [...concatArgs, ...args];
 
-    if (n > concatArgs.length) {
-      return _curry(n, fn, concatArgs);
+    // If function arity greater than number of received args
+    if (fn.length > concatArgs.length) {
+      return _curry(fn, concatArgs);
     } else {
-      return fn.apply(null, slice.call(concatArgs, 0, n));
+      return fn(...concatArgs);
     }
   };
 };
 
 export function curry(fn) {
-  return _curry(fn.length, fn);
+  return _curry(fn);
 }
 
+// curryN now unnecessary
 export function curryN(n, fn) {
   return _curry(n, fn);
 }
