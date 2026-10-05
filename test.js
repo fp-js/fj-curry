@@ -2,7 +2,7 @@
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
 
-var test = _interopRequire(require("prova"));
+var test = _interopRequire(require('tape'));
 
 var stub = require("sinon").stub;
 var _ = require("./");
