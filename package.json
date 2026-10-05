@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/fp-js/fj-curry",
   "devDependencies": {
-    "sinon": "^22.1.0",
+    "sinon": "22.1.0",
     "tape": "^5.9.0"
   }
 }
